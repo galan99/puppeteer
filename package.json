@@ -1,0 +1,26 @@
+{
+  "name": "puppeteer-pdf",
+  "version": "1.0.0",
+  "description": "pdf",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "merge": "node mergePdf.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galan99/puppeteer-pdf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galan99/puppeteer-pdf/issues"
+  },
+  "homepage": "https://github.com/galan99/puppeteer-pdf#readme",
+  "devDependencies": {
+    "pdf-merger-js": "^4.0.0",
+    "puppeteer": "^16.2.0",
+    "rimraf": "^3.0.2"
+  }
+}
