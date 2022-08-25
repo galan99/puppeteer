@@ -26,7 +26,7 @@ function mkdirOutputpath(outputPath) {
 
 (async () => {
   const browser = await puppeteer.launch({
-    // headless: false,
+    // headless: false, pdf功能不能打开浏览器，所以不能使用headless: false
     // args: ['--start-maximized'], // 打开浏览器时，最大化窗口
     // devtools: true,
     // defaultViewport: {

@@ -4,8 +4,9 @@
   "description": "pdf",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js",
+    "pdf": "node index.js",
     "merge": "node mergePdf.js",
+    "screen": "node screenshot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
