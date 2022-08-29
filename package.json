@@ -7,6 +7,7 @@
     "pdf": "node index.js",
     "merge": "node mergePdf.js",
     "screen": "node screenshot.js",
+    "jd": "node jdlogin.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +24,8 @@
     "pdf-merger-js": "^4.0.0",
     "puppeteer": "^16.2.0",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "canvas": "^2.9.3"
   }
 }

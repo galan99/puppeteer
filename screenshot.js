@@ -2,11 +2,6 @@ const puppeteer = require("puppeteer");
 const path = require("path");
 const fs = require("fs");
 
-/**
- * 截图功能说明
- * https://www.bannerbear.com/blog/how-to-take-screenshots-with-puppeteer/
- * **/
-
 // 创建文件夹
 function mkdirOutputpath(outputPath) {
   try {
