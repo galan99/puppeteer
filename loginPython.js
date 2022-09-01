@@ -91,7 +91,7 @@ function downloadImage(data, path, name) {
     const res = await findImageOption(example_image);
 
     // 获取缺口左x坐标
-    const distance = res * width / naturalWidth;
+    const distance = parseInt(res * width / naturalWidth);
     console.log("获取缺口左x坐标", res, distance)
 
     // debug 用：在页面上展示找到的位置
