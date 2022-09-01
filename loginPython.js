@@ -1,5 +1,9 @@
-const puppeteer = require("puppeteer");
-const iPhone6 = puppeteer.devices["iPhone 6"];
+const puppeteer = require('puppeteer-extra')
+const StealthPlugin = require('puppeteer-extra-plugin-stealth')
+puppeteer.use(StealthPlugin())
+const AdblockerPlugin = require('puppeteer-extra-plugin-adblocker')
+puppeteer.use(AdblockerPlugin({ blockTrackers: true }))
+
 const exec = require('child_process').exec;
 const base64Img = require('base64-img');
 
@@ -45,7 +49,17 @@ function downloadImage(data, path, name) {
   const browser = await puppeteer.launch({
     headless: false,
     defaultViewport: null,
-    args: ["--start-maximized"], // 打开浏览器时，最大化窗口
+    ignoreHTTPSErrors: true,
+    slowMo: 0,
+    args: [
+      // '--window-size=1400,900', 设置浏览器窗口大小
+      // '--remote-debugging-port=9222',
+      // "--remote-debugging-address=0.0.0.0", // You know what your doing?
+      // '--disable-gpu', 
+      // "--disable-features=IsolateOrigins,site-per-process", 
+      // '--blink-settings=imagesEnabled=true',
+      "--start-maximized", // 打开浏览器时，最大化窗口
+    ],
   });
 
   console.log("打开页面");
